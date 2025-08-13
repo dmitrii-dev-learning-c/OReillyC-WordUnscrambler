@@ -42,17 +42,19 @@ namespace WordUnscrabler.WordUnscramblerWorkers
                 }
             }
 
+             MatchedWord BuildMatchedWord(string scrambledWord, string word)
+            {
+                MatchedWord matchedWord = new MatchedWord
+                {
+                    ScrambledWord = scrambledWord,
+                    Word = word
+                };
+                return matchedWord;
+            }
+
             return matchedWords;
         }
 
-        private MatchedWord BuildMatchedWord(string scrambledWord, string word)
-        {
-            MatchedWord matchedWord = new MatchedWord
-            {
-                ScrambledWord = scrambledWord,
-                Word = word
-            };
-            return matchedWord;
-        }
+       
     }
 }
